@@ -41,7 +41,15 @@ const WriteDesk = () => {
       return;
     }
 
-    if (entryType === "envelope" && new Date(unlockDate) <= new Date()) {
+    const finalUnlockDate =
+      entryType === "envelope"
+        ? new Date(unlockDate).toISOString()
+        : null;
+
+    if (
+      entryType === "envelope" &&
+      new Date(finalUnlockDate) <= new Date()
+    ) {
       toast.error("Unlock date must be in the future.");
       return;
     }
@@ -53,7 +61,7 @@ const WriteDesk = () => {
         type: entryType,
         title,
         content,
-        unlockDate: entryType === "envelope" ? unlockDate : null,
+        unlockDate: finalUnlockDate,
         sendEmail: entryType === "envelope" ? sendEmail : false,
       });
 
