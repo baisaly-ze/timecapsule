@@ -3,13 +3,13 @@ import {
   Route,
 } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import ProtectedRoute from "./components/ProtectedRoute";
+import Navbar from "./components/Navbar.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
-import HomePage from "./pages/HomePage";
-import AuthPage from "./pages/AuthPage";
-import Dashboard from "./pages/Dashboard";
-import WriteDesk from "./pages/WriteDesk";
+import HomePage from "./pages/HomePage.jsx";
+import AuthPage from "./pages/AuthPage.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import WriteDesk from "./pages/WriteDesk.jsx";
 
 function App() {
   return (
