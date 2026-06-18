@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/entries";
+const API_URL = "https://timecapsule-skcz.onrender.com/api/entries";
 
 export const createEntry = async (entryData) => {
   const res = await fetch(API_URL, {
