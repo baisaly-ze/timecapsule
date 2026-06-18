@@ -1,0 +1,132 @@
+.app-sidebar {
+  width: 245px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(22, 10, 17, 0.96);
+  border-right: 1px solid rgba(216, 144, 37, 0.14);
+  backdrop-filter: blur(16px);
+  padding: 28px 20px;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 46px;
+
+}
+
+.sidebar-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 10px rgba(36, 28, 15, 0.25));
+  transition: 0.45s;
+}
+
+.sidebar-brand:hover .sidebar-icon {
+  transform: rotate(180deg);
+}
+
+.sidebar-brand h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin: 0;
+
+  background: linear-gradient(
+    135deg,
+    #f1d1a2 0%,
+    #d89025 45%,
+    #f5b6b2 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-nav button,
+.sidebar-logout {
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 13px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #c1b3bb;
+  cursor: pointer;
+}
+
+.sidebar-logout {
+  border: none;
+  background-color:rgb(172, 102, 23);
+
+  border-radius: 6px;
+  font-weight: 700;
+  width: 60%;
+  text-align: center;
+
+  color: #f3eff1;
+  cursor: pointer;
+}
+
+.sidebar-nav button.active {
+  background: rgba(216, 144, 37, 0.12);
+  color: #d89025;
+  border: 1px solid rgba(216, 144, 37, 0.2);
+}
+
+.sidebar-nav button:hover,
+.sidebar-logout:hover {
+  background: rgba(216, 144, 37, 0.08);
+  color: #f0d2a0;
+}
+
+.sidebar-logout {
+  color: #f5b6b2;
+}
+
+.sidebar-mobile-btn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .sidebar-mobile-btn {
+    display: block;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1200;
+    border: none;
+    background: #d89025;
+    color: #160a11;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+  }
+
+  .app-sidebar {
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+

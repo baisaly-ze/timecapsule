@@ -1,0 +1,148 @@
+.about-container{
+    width:100%;
+    background:#ecd7b5;
+}
+
+/* top */
+
+.about-top{
+    padding:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    border-bottom:1px solid rgba(60,30,5,.12);
+}
+
+.about-left{
+    width:55%;
+}
+
+.about-right{
+    width:30%;
+}
+
+.about-tag{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#B8860B;
+    margin-bottom:20px;
+}
+
+.about-heading{
+    font-size:3.3rem;
+    line-height:1;
+    color:#1C0E03;
+    font-weight:500;
+}
+
+.about-heading em{
+    color:#8B5E0A;
+    font-style:italic;
+}
+
+.about-sub{
+    font-size:14px;
+    line-height:1.8;
+    color:#6B5030;
+}
+
+/* cards */
+
+.about-cards{
+    display:flex;
+}
+
+.card{
+    flex:1;
+    padding:40px;
+    border-right:1px solid rgba(60,30,5,.08);
+    transition:.3s;
+}
+
+.card:last-child{
+    border-right:none;
+}
+
+.card:hover{
+    background:#F0E8D5;
+}
+
+.card-num{
+    font-size:4rem;
+    color:rgba(184,134,11,.18);
+    margin-bottom:20px;
+    font-style:italic;
+}
+
+.card-title{
+    font-size:1.4rem;
+    margin-bottom:15px;
+    color:#1C0E03;
+}
+
+.card-text{
+    font-size:14px;
+    line-height:1.8;
+    color:#7A5C35;
+}
+
+/* bottom */
+
+.about-bottom{
+    padding:30px 60px;
+    border-top:1px solid rgba(60,30,5,.12);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.quote{
+    color:#8B5E0A;
+    font-style:italic;
+}
+
+.year{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:rgba(60,30,5,.35);
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+    .about-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:25px;
+        padding:40px 30px;
+    }
+
+    .about-left,
+    .about-right{
+        width:100%;
+    }
+
+    .about-heading{
+        font-size:2.5rem;
+    }
+
+    .about-cards{
+        flex-direction:column;
+    }
+
+    .card{
+        border-right:none;
+        border-bottom:1px solid rgba(60,30,5,.08);
+    }
+
+    .about-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+        padding:30px;
+    }
+}

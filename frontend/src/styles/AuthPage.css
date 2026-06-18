@@ -1,0 +1,320 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
+
+.auth-page {
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #120606 0%, #2a0707 45%, #5a100b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='1400' height='900' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3Etext%7Bfont-family:Georgia,serif;font-size:18px;font-style:italic;fill:rgba(238,183,120,0.34)%7D%3C/style%3E%3Cg%3E%3Ctext x='20' y='35'%3EI sealed this letter on a quiet evening. The room smelled like old books and something familiar. I wanted to remember this moment exactly as it was.%3C/text%3E%3Ctext x='20' y='65'%3EDear Future Me, if you are reading this, then time has done its work. Some memories fade. Some remain. This one deserved a place in the archive.%3C/text%3E%3Ctext x='20' y='95'%3EWrite now, remember later. Private notes, future letters, sealed envelopes, opened when the moment finally arrives.%3C/text%3E%3Ctext x='20' y='125'%3EThe person writing this hopes you are doing well. Remember what mattered. Remember who you were becoming.%3C/text%3E%3C/g%3E%3C/svg%3E");
+  background-size: 700px 220px;
+  background-repeat: repeat;
+  background-position: top left;
+  opacity: 1;
+  z-index: 1;
+}
+
+.auth-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 3, 3, 0.18);
+  z-index: 2;
+}
+
+.auth-bg-text {
+  display: none;
+}
+
+.auth-shell {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  background: rgba(255, 248, 242, 0.95);
+  border: 1px solid rgba(126, 78, 64, 0.18);
+  border-radius: 22px;
+  padding: 38px 36px;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
+  position: relative;
+  z-index: 10;
+}
+
+.auth-mark {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #b76d5b;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+}
+
+.auth-kicker {
+  margin: 0 0 10px;
+  letter-spacing: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #9f5b4c;
+}
+
+.auth-shell h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.15rem;
+  line-height: 0.95;
+  font-weight: 500;
+  margin: 0;
+  color: #2d2a26;
+}
+
+.auth-text {
+  max-width: 410px;
+  margin: 20px auto 26px;
+  line-height: 1.6;
+  color: #6d5f58;
+  font-size: 0.92rem;
+}
+
+.google-login-btn {
+  width: 100%;
+  max-width: 330px;
+  border: none;
+  background: #2d2a26;
+  color: white;
+  padding: 15px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.google-login-btn span {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+  color: #2d2a26;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.auth-small {
+  margin: 18px auto 0;
+  max-width: 340px;
+  color: #86736a;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .auth-page {
+    height: calc(100vh - 70px);
+    padding: 14px;
+  }
+
+  .auth-page::before {
+    background-size: auto 100%;
+  }
+
+  .auth-shell {
+    padding: 28px 22px;
+    max-width: 92%;
+  }
+
+  .auth-shell h1 {
+    font-size: 2.35rem;
+  }
+
+  .auth-text {
+    font-size: 0.86rem;
+    margin: 16px auto 22px;
+  }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap");
+
+/* ── Page shell ───────────────────────────────────────────── */
+.auth-page {
+  min-height: calc(100vh - 75px);
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, #331106 0%, #351404 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ── Full-page background letter text ────────────────────── */
+.auth-bg-text {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 6px 8px;
+  overflow: hidden;
+  /* color: #C9951A; */
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.52;
+color: #d7a53a;
+opacity: 0.22;
+  text-align: justify;
+  word-spacing: 8px;
+  letter-spacing: 0.2px;
+  pointer-events: none;
+}
+
+.auth-bg-text p {
+  margin: 0;
+  display: inline;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.auth-shell {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  background: #fbe4c3;
+  border: 1px solid rgba(139, 46, 46, 0.12);
+  border-radius: 20px;
+  padding: 44px 48px 38px;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(201, 149, 26, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+/* ── Icon circle ──────────────────────────────────────────── */
+.auth-mark {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #8B2E2E;
+  color: #F5EDDF;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+}
+
+/* ── Brand kicker ─────────────────────────────────────────── */
+.auth-kicker {
+  margin: 0 0 12px;
+  letter-spacing: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #8B2E2E;
+  font-family: "Inter", sans-serif;
+}
+
+/* ── Headline ─────────────────────────────────────────────── */
+.auth-shell h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  line-height: 1.05;
+  font-weight: 500;
+  margin: 0;
+  color: #2C1510;
+}
+
+/* ── Body text ────────────────────────────────────────────── */
+.auth-text {
+  max-width: 380px;
+  margin: 20px auto 28px;
+  line-height: 1.65;
+  color: #6B4C3B;
+  font-size: 0.88rem;
+}
+
+/* ── Google button ────────────────────────────────────────── */
+.google-login-btn {
+  width: 100%;
+  max-width: 340px;
+  border: none;
+  background: #2C1510;
+  color: #F5EDDF;
+  padding: 15px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  transition: background 0.2s ease, transform 0.15s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.google-login-btn:hover {
+  background: #3e1e16;
+  transform: translateY(-1px);
+}
+
+.google-login-btn span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F5EDDF;
+  color: #8B2E2E;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ── Fine print ───────────────────────────────────────────── */
+.auth-small {
+  margin: 18px auto 0;
+  max-width: 320px;
+  color: #9A7060;
+  font-size: 0.73rem;
+  line-height: 1.55;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .auth-page {
+    min-height: calc(100vh - 70px);
+    padding: 14px;
+  }
+
+  .auth-bg-text {
+    font-size: 11.5px;
+    word-spacing: 5px;
+  }
+
+  .auth-shell {
+    padding: 32px 24px 28px;
+    max-width: 95%;
+  }
+
+  .auth-shell h1 {
+    font-size: 2.4rem;
+  }
+
+  .auth-text {
+    font-size: 0.84rem;
+    margin: 16px auto 22px;
+  }
+}

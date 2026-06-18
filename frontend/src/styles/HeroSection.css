@@ -1,0 +1,426 @@
+/* ===== HERO WRAPPER ===== */
+
+.hero-container{
+    min-height:100vh;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:38px 60px 10px;
+
+    background-image:
+      linear-gradient(rgba(35, 9, 9, 0.82),
+      rgba(13, 5, 1, 0.82)),
+      url('../assets/bg-check.png');
+
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* ===== LEFT ===== */
+
+.hero-left{
+    width:52%;
+    z-index:2;
+    margin-top:20px;
+}
+
+.hero-left h6{
+    color:#d89025;
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    font-weight:500;
+}
+
+.hero-sub{
+    font-size:7rem;
+    line-height:.88;
+    margin:0;
+    color:#f3eadb;
+    font-family:Georgia, serif;
+    max-width:650px;
+}
+
+.hero-sub br + *{
+    color:#d89025;
+}
+
+.hero-left p{
+    margin-top:20px;
+    max-width:480px;
+    line-height:1.8;
+    color:#c7b6a7;
+    font-size:18px;
+}
+
+/* ===== BUTTONS ===== */
+
+.hero-btn{
+    margin-top:30px;
+    padding:18px 38px;
+
+    border:none;
+    border-radius:4px;
+
+    background:#d89025;
+    color:#1e1009;
+
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    cursor:pointer;
+
+    margin-right:18px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-2px);
+}
+
+.hs-btn-ghost{
+    background:none;
+    border:none;
+
+    color:#c9b5a3;
+    letter-spacing:2px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* ===== RIGHT SIDE ===== */
+
+.hero-right{
+    position:relative;
+    width:45%;
+    min-height:700px;
+    margin-top:30px;
+}
+
+/* ===== CLOCK ===== */
+
+.clock-block{
+    position:absolute;
+    top:0px;
+    right:10px;
+    text-align:right;
+}
+
+.clock-label{
+    display:block;
+    color:#f8ba90;
+    font-size:13px;
+    letter-spacing:4px;
+    margin-bottom:12px;
+}
+
+.live-clock{
+    margin:0;
+    font-size:4rem;
+    color:#f3eadb;
+    letter-spacing:6px;
+    font-weight:700;
+}
+
+.live-date{
+    margin-top:10px;
+    color:#f8ba90;
+    font-size:20px;
+    font-weight:500;
+}
+
+/* ===== NOTE CARD ===== */
+
+.note-card{
+    position:absolute;
+    top:70px;
+    right:430px;
+
+    width:250px;
+    padding:28px;
+
+    background:#e8dbb7;
+    color:#5b4331;
+
+    border-radius:5px;
+
+    transform:rotate(-4deg);
+
+    box-shadow:
+    0 14px 30px rgba(0,0,0,.35);
+}
+
+.pin{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:0;
+    height:0;
+
+    border-left:12px solid transparent;
+    border-right:12px solid transparent;
+    border-bottom:20px solid #c78d32;
+}
+
+.note-label{
+    display:block;
+    color:#a88f75;
+    letter-spacing:3px;
+    font-size:12px;
+    margin-bottom:18px;
+}
+
+.note-text{
+    line-height:1.6;
+    font-size:19px;
+    font-style:italic;
+    font-weight:600;
+}
+
+.note-date{
+    display:block;
+    margin-top:22px;
+    color:#8f7c67;
+}
+
+/* ===== CAPSULE ===== */
+
+.capsule-card{
+    position:absolute;
+    top:320px;
+    left:0;
+
+    width:260px;
+    padding:30px;
+
+    background:#3a1407;
+    border:1px solid #6f3311;
+    border-radius:10px;
+
+    color:#f3eadb;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.35);
+}
+
+.capsule-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+
+    color:#d89025;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.lock-circle{
+    width:36px;
+    height:36px;
+
+    border-radius:50%;
+    border:1px solid #d89025;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.capsule-text{
+    font-size:18px;
+    line-height:1.7;
+    font-style:italic;
+}
+
+.unlock-date{
+    display:block;
+    margin-top:20px;
+    color:#a88a77;
+}
+
+/* ===== MEMORY CARD ===== */
+
+.memory-card{
+    position:absolute;
+    top:190px;
+  
+    left:300px;
+
+    width:360px;
+    padding:20px;
+
+    background:#2b0b03;
+    border:1px solid #5d2410;
+    border-radius:12px;
+
+    color:#f3eadb;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.4);
+}
+
+.quote-mark{
+    color:#d89025;
+    font-size:25px;
+}
+
+.memory-card h3{
+    margin:0;
+    font-size:2rem;
+    line-height:1.4;
+    font-family:Georgia, serif;
+}
+
+.memory-card p{
+    margin-top:10px;
+    color:#b49b8a;
+    line-height:1.8;
+}
+
+.start-writing{
+    margin-top:20px;
+
+    background:none;
+    border:none;
+
+    color:#d89025;
+    letter-spacing:2px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.start-writing:hover{
+    transform:scale(1.05);
+   
+}
+
+.memory-footer{
+    margin-top:26px;
+    padding-top:18px;
+    border-top:1px solid #4b1b0b;
+
+    color:#9d7a63;
+    font-style:italic;
+    font-size:14px;
+}
+
+
+
+@media (max-width:1024px){
+
+.hero-container{
+    flex-direction:column;
+    padding:60px 40px;
+    gap:70px;
+}
+
+.hero-left{
+    width:100%;
+    text-align:center;
+}
+
+.hero-sub{
+    font-size:5.5rem;
+}
+
+.hero-left p{
+    margin:auto;
+    margin-top:25px;
+}
+
+.hero-right{
+    width:100%;
+    min-height:800px;
+}
+
+.clock-block{
+    right:30px;
+}
+}
+
+
+@media (max-width:768px){
+
+.hero-container{
+    padding:50px 25px;
+}
+
+.hero-left{
+    text-align:left;
+}
+
+.hero-sub{
+    font-size:4rem;
+    line-height:.95;
+}
+
+.hero-left h6{
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.hero-left p{
+    font-size:16px;
+    max-width:100%;
+}
+
+.hero-btn{
+    width:100%;
+    margin-right:0;
+    margin-bottom:14px;
+}
+
+.hs-btn-ghost{
+    display:block;
+}
+
+/* RIGHT SIDE STACKS */
+
+.hero-right{
+    position:static;
+    width:100%;
+    min-height:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* remove absolute positioning */
+
+.clock-block,
+.note-card,
+.capsule-card,
+.memory-card{
+    position:relative;
+    top:auto;
+    right:auto;
+    left:auto;
+    transform:none;
+    width:100%;
+}
+
+.clock-block{
+    text-align:left;
+}
+
+.live-clock{
+    font-size:2.5rem;
+}
+
+.note-card,
+.capsule-card,
+.memory-card{
+    box-sizing:border-box;
+}
+
+.memory-card{
+    padding:32px;
+}
+}
