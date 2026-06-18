@@ -20,7 +20,7 @@ const sendUnlockEmail = async (userEmail, title) => {
       <h2>The words you saved for the future are waiting for you ✨</h2>
       <p>The envelope <strong>${title}</strong> has reached its unlock date.</p>
       <p>Return to TimeCapsule and open your memory.</p>
-      <a href="http://localhost:5173/dashboard">Open TimeCapsule</a>
+    <a href="https://timecapsule-neon.vercel.app/dashboard">Open TimeCapsule</a>
     `,
   });
 };
